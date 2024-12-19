@@ -21,7 +21,7 @@ class RecipeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff1C0F0D),
+      backgroundColor:Colors.green,
       body: Center(
         child: Container(
           width: 358,
@@ -46,7 +46,7 @@ class RecipeItem extends StatelessWidget {
                 ),
               ),
               Positioned(
-                right: 0,
+                right: -5,
                 top: 10,
                 child: Container(
                   padding: const EdgeInsets.all(8.0),
@@ -70,7 +70,7 @@ class RecipeItem extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 5),
+                      const SizedBox(height: 3),
                       const Text(
                         "Savor the aromatic Chicken Curry—a rich blend of spices...",
                         maxLines: 2,
@@ -80,7 +80,7 @@ class RecipeItem extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
-                      const Spacer(),
+                      SizedBox(height: 4),
                       const Text(
                         "By Chef Josh Ryan",
                         style: TextStyle(
@@ -88,7 +88,7 @@ class RecipeItem extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
-                      const Spacer(),
+                      SizedBox(height: 5),
                       Row(
                         children: [
                           SvgPicture.asset("assets/clock1.svg", width: 12, height: 12),
@@ -101,7 +101,7 @@ class RecipeItem extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                             ),
                           ),
-                          const Spacer(),
+                          SizedBox(width: 29),
                           const Text(
                             "Easy",
                             style: TextStyle(color: Color(0xffEC888D)),
@@ -112,7 +112,7 @@ class RecipeItem extends StatelessWidget {
                             width: 13,
                             height: 10,
                           ),
-                          const Spacer(),
+                          SizedBox(width: 35),
                           const Text(
                             "4",
                             style: TextStyle(
