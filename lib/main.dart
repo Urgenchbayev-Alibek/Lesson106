@@ -21,7 +21,7 @@ class RecipeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Colors.green,
+      backgroundColor: const Color(0xff1C0F0D),
       body: Center(
         child: Container(
           width: 358,
@@ -32,6 +32,7 @@ class RecipeItem extends StatelessWidget {
           child: Stack(
             clipBehavior: Clip.none,
             children: [
+              // Chicken Curry image
               Positioned(
                 left: 0,
                 top: -5,
@@ -39,12 +40,33 @@ class RecipeItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(14),
                   child: const Image(
                     image: AssetImage("assets/chicken-curry.png"),
-                    width: 151,
+                    width: 153,
                     height: 150,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
+              // Heart icon over image
+              Positioned(
+                left: 115, // Adjust as needed
+                top: 3,  // Adjust as needed
+                child: Container(
+                  height: 28,
+                  width: 28,
+                  decoration: const BoxDecoration(
+                    color: Color(0xffFD5D69),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      "assets/heart.svg",
+                      width: 15,
+                      height: 15,
+                    ),
+                  ),
+                ),
+              ),
+              // Details container
               Positioned(
                 right: -5,
                 top: 10,
@@ -80,7 +102,7 @@ class RecipeItem extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
-                      SizedBox(height: 4),
+                      const SizedBox(height: 4),
                       const Text(
                         "By Chef Josh Ryan",
                         style: TextStyle(
@@ -88,7 +110,7 @@ class RecipeItem extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Row(
                         children: [
                           SvgPicture.asset("assets/clock1.svg", width: 12, height: 12),
@@ -101,7 +123,7 @@ class RecipeItem extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                             ),
                           ),
-                          SizedBox(width: 29),
+                          const SizedBox(width: 29),
                           const Text(
                             "Easy",
                             style: TextStyle(color: Color(0xffEC888D)),
@@ -112,7 +134,7 @@ class RecipeItem extends StatelessWidget {
                             width: 13,
                             height: 10,
                           ),
-                          SizedBox(width: 35),
+                          const SizedBox(width: 35),
                           const Text(
                             "4",
                             style: TextStyle(
